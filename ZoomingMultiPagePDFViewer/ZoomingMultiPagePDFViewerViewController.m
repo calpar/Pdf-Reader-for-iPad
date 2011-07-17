@@ -7,6 +7,7 @@
 //
 
 #import "ZoomingMultiPagePDFViewerViewController.h"
+#import "PDFScrollView.h"
 
 @implementation ZoomingMultiPagePDFViewerViewController
 
@@ -25,13 +26,34 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIScrollView *scroll = [[UIScrollView alloc] init];
+    scroll.frame = CGRectMake(0, 0, 1024, 768);
+    scroll.pagingEnabled = YES;
+    scroll.scrollEnabled = YES;
+    
+    NSString *pdfFileName = @"alice.pdf";
+    
+    PDFScrollView *sv = [[PDFScrollView alloc] initWithFrame:[[self view] bounds] andFileName:pdfFileName];
+    sv.pageIndex = 1;
+    sv.frame = CGRectMake(0, 0, 1024, 768);
+
+    [scroll addSubview:sv];    
+    
+    PDFScrollView *sv2 = [[PDFScrollView alloc] initWithFrame:[[self view] bounds] andFileName:pdfFileName];
+    sv2.pageIndex = 2;
+    sv2.frame = CGRectMake(0, 768, 1024, 768);
+    [scroll addSubview:sv2];
+
+    scroll.contentSize = CGSizeMake(1024, 768*2);
+    
+    [self.view addSubview:scroll];
 }
-*/
 
 - (void)viewDidUnload
 {
