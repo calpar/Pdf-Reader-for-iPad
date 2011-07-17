@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		703269A413D2BB1A0048E55E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703269A313D2BB1A0048E55E /* UIKit.framework */; };
+		703269A613D2BB1A0048E55E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703269A513D2BB1A0048E55E /* Foundation.framework */; };
+		703269A813D2BB1A0048E55E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703269A713D2BB1A0048E55E /* CoreGraphics.framework */; };
+		703269AE13D2BB1A0048E55E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703269AC13D2BB1A0048E55E /* InfoPlist.strings */; };
+		703269B113D2BB1A0048E55E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B013D2BB1A0048E55E /* main.m */; };
+		703269B413D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */; };
+		703269B713D2BB1A0048E55E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703269B513D2BB1A0048E55E /* MainWindow.xib */; };
+		703269BA13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */; };
+		703269BD13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7032699F13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomingMultiPagePDFViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		703269A313D2BB1A0048E55E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		703269A513D2BB1A0048E55E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		703269A713D2BB1A0048E55E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		703269AB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer-Info.plist */ = {isa = PBXFileReference; path = "ZoomingMultiPagePDFViewer-Info.plist"; sourceTree = "<group>"; };
+		703269AD13D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		703269AF13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer-Prefix.pch */ = {isa = PBXFileReference; path = "ZoomingMultiPagePDFViewer-Prefix.pch"; sourceTree = "<group>"; };
+		703269B013D2BB1A0048E55E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		703269B213D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.h */ = {isa = PBXFileReference; path = ZoomingMultiPagePDFViewerAppDelegate.h; sourceTree = "<group>"; };
+		703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomingMultiPagePDFViewerAppDelegate.m; sourceTree = "<group>"; };
+		703269B613D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		703269B813D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.h */ = {isa = PBXFileReference; path = ZoomingMultiPagePDFViewerViewController.h; sourceTree = "<group>"; };
+		703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomingMultiPagePDFViewerViewController.m; sourceTree = "<group>"; };
+		703269BC13D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ZoomingMultiPagePDFViewerViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7032699C13D2BB1A0048E55E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703269A413D2BB1A0048E55E /* UIKit.framework in Frameworks */,
+				703269A613D2BB1A0048E55E /* Foundation.framework in Frameworks */,
+				703269A813D2BB1A0048E55E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7032699413D2BB1A0048E55E = {
+			isa = PBXGroup;
+			children = (
+				703269A913D2BB1A0048E55E /* ZoomingMultiPagePDFViewer */,
+				703269A213D2BB1A0048E55E /* Frameworks */,
+				703269A013D2BB1A0048E55E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		703269A013D2BB1A0048E55E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7032699F13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		703269A213D2BB1A0048E55E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				703269A313D2BB1A0048E55E /* UIKit.framework */,
+				703269A513D2BB1A0048E55E /* Foundation.framework */,
+				703269A713D2BB1A0048E55E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		703269A913D2BB1A0048E55E /* ZoomingMultiPagePDFViewer */ = {
+			isa = PBXGroup;
+			children = (
+				703269B213D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.h */,
+				703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */,
+				703269B513D2BB1A0048E55E /* MainWindow.xib */,
+				703269B813D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.h */,
+				703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */,
+				703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */,
+				703269AA13D2BB1A0048E55E /* Supporting Files */,
+			);
+			path = ZoomingMultiPagePDFViewer;
+			sourceTree = "<group>";
+		};
+		703269AA13D2BB1A0048E55E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				703269AB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer-Info.plist */,
+				703269AC13D2BB1A0048E55E /* InfoPlist.strings */,
+				703269AF13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer-Prefix.pch */,
+				703269B013D2BB1A0048E55E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7032699E13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 703269C013D2BB1A0048E55E /* Build configuration list for PBXNativeTarget "ZoomingMultiPagePDFViewer" */;
+			buildPhases = (
+				7032699B13D2BB1A0048E55E /* Sources */,
+				7032699C13D2BB1A0048E55E /* Frameworks */,
+				7032699D13D2BB1A0048E55E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZoomingMultiPagePDFViewer;
+			productName = ZoomingMultiPagePDFViewer;
+			productReference = 7032699F13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7032699613D2BB1A0048E55E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7032699913D2BB1A0048E55E /* Build configuration list for PBXProject "ZoomingMultiPagePDFViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7032699413D2BB1A0048E55E;
+			productRefGroup = 703269A013D2BB1A0048E55E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7032699E13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7032699D13D2BB1A0048E55E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703269AE13D2BB1A0048E55E /* InfoPlist.strings in Resources */,
+				703269B713D2BB1A0048E55E /* MainWindow.xib in Resources */,
+				703269BD13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7032699B13D2BB1A0048E55E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703269B113D2BB1A0048E55E /* main.m in Sources */,
+				703269B413D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m in Sources */,
+				703269BA13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		703269AC13D2BB1A0048E55E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				703269AD13D2BB1A0048E55E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		703269B513D2BB1A0048E55E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				703269B613D2BB1A0048E55E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				703269BC13D2BB1A0048E55E /* en */,
+			);
+			name = ZoomingMultiPagePDFViewerViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		703269BE13D2BB1A0048E55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		703269BF13D2BB1A0048E55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		703269C113D2BB1A0048E55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZoomingMultiPagePDFViewer/ZoomingMultiPagePDFViewer-Prefix.pch";
+				INFOPLIST_FILE = "ZoomingMultiPagePDFViewer/ZoomingMultiPagePDFViewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		703269C213D2BB1A0048E55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZoomingMultiPagePDFViewer/ZoomingMultiPagePDFViewer-Prefix.pch";
+				INFOPLIST_FILE = "ZoomingMultiPagePDFViewer/ZoomingMultiPagePDFViewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7032699913D2BB1A0048E55E /* Build configuration list for PBXProject "ZoomingMultiPagePDFViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				703269BE13D2BB1A0048E55E /* Debug */,
+				703269BF13D2BB1A0048E55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		703269C013D2BB1A0048E55E /* Build configuration list for PBXNativeTarget "ZoomingMultiPagePDFViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				703269C113D2BB1A0048E55E /* Debug */,
+				703269C213D2BB1A0048E55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7032699613D2BB1A0048E55E /* Project object */;
+}
