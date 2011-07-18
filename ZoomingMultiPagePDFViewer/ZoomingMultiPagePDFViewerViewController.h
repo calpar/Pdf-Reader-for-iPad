@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoomingMultiPagePDFViewerViewController : UIViewController 
+@interface ZoomingMultiPagePDFViewerViewController : UIViewController <UIScrollViewDelegate>
 {
-
+    UIScrollView *scrollView;
+    
+    NSMutableSet *recycledPages;
+    NSMutableSet *visiblePages;
+    
+    int pageCount;
 }
 
-
+@property (nonatomic, assign) int pageCount;
+@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) NSMutableSet *recycledPages;
+@property (nonatomic, retain) NSMutableSet *visiblePages;
 
 @end

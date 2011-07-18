@@ -58,7 +58,6 @@
 	// renders its content.
 	UIImageView *backgroundImageView;
 
-
 	// current pdf zoom scale
 	CGFloat pdfScale;
 	

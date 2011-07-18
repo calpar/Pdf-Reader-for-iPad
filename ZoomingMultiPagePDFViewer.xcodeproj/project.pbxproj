@@ -91,13 +91,13 @@
 		703269A913D2BB1A0048E55E /* ZoomingMultiPagePDFViewer */ = {
 			isa = PBXGroup;
 			children = (
+				703269B813D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.h */,
+				703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */,
+				703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */,
 				703269C313D2BD7C0048E55E /* base */,
 				703269B213D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.h */,
 				703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */,
 				703269B513D2BB1A0048E55E /* MainWindow.xib */,
-				703269B813D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.h */,
-				703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */,
-				703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */,
 				703269AA13D2BB1A0048E55E /* Supporting Files */,
 			);
 			path = ZoomingMultiPagePDFViewer;
@@ -306,6 +306,7 @@
 				703269C213D2BB1A0048E55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
