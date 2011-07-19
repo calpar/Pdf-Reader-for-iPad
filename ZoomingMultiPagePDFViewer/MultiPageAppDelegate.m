@@ -6,11 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ZoomingMultiPagePDFViewerAppDelegate.h"
+#import "MultiPageAppDelegate.h"
 
-#import "ZoomingMultiPagePDFViewerViewController.h"
+#import "PageViewController.h"
 
-@implementation ZoomingMultiPagePDFViewerAppDelegate
+@implementation MultiPageAppDelegate
 
 
 @synthesize window=_window;

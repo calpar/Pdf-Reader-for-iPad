@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoomingMultiPagePDFViewerViewController : UIViewController <UIScrollViewDelegate>
+@class PDFScrollView;
+
+@interface PageViewController : UIViewController <UIScrollViewDelegate>
 {
     UIScrollView *scrollView;
     

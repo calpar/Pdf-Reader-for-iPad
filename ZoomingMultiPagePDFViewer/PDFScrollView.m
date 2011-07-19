@@ -50,11 +50,15 @@
 @implementation PDFScrollView
 
 @synthesize pageIndex;
+@synthesize fileName;
 
-- (id)initWithFrame:(CGRect)frame andFileName:(NSString *)fileName
+- (id)initWithFrame:(CGRect)frame andFileName:(NSString *)newFileName withPage:(NSInteger)thePageIndex
 {
     if ((self = [super initWithFrame:frame])) 
     {
+        self.fileName = newFileName;
+        self.pageIndex = thePageIndex;
+        
 		// Set up the UIScrollView
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
@@ -64,58 +68,58 @@
 		[self setBackgroundColor:[UIColor grayColor]];
 		self.maximumZoomScale = 5.0;
 		self.minimumZoomScale = .25;
-		
+        
 		// Open the PDF document
 		NSURL *pdfURL = [[NSBundle mainBundle] URLForResource:fileName withExtension:nil];
 		pdf = CGPDFDocumentCreateWithURL((CFURLRef)pdfURL);
-		
+        
 		// Get the PDF Page that we will be drawing
-		page = CGPDFDocumentGetPage(pdf, 1);
+		page = CGPDFDocumentGetPage(pdf, pageIndex);
 		CGPDFPageRetain(page);
-		
+        
 		// determine the size of the PDF page
 		CGRect pageRect = CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
 		pdfScale = self.frame.size.width/pageRect.size.width;
 		pageRect.size = CGSizeMake(pageRect.size.width*pdfScale, pageRect.size.height*pdfScale);
-		
-		
+        
+        
 		// Create a low res image representation of the PDF page to display before the TiledPDFView
 		// renders its content.
 		UIGraphicsBeginImageContext(pageRect.size);
-		
+        
 		CGContextRef context = UIGraphicsGetCurrentContext();
-		
+        
 		// First fill the background with white.
 		CGContextSetRGBFillColor(context, 1.0,1.0,1.0,1.0);
 		CGContextFillRect(context,pageRect);
-		
+        
 		CGContextSaveGState(context);
 		// Flip the context so that the PDF page is rendered
 		// right side up.
 		CGContextTranslateCTM(context, 0.0, pageRect.size.height);
 		CGContextScaleCTM(context, 1.0, -1.0);
-		
+        
 		// Scale the context so that the PDF page is rendered 
 		// at the correct size for the zoom level.
 		CGContextScaleCTM(context, pdfScale,pdfScale);	
 		CGContextDrawPDFPage(context, page);
 		CGContextRestoreGState(context);
-		
+        
 		UIImage *backgroundImage = UIGraphicsGetImageFromCurrentImageContext();
-		
+        
 		UIGraphicsEndImageContext();
-		
+        
 		backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
 		backgroundImageView.frame = pageRect;
 		backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
 		[self addSubview:backgroundImageView];
 		[self sendSubviewToBack:backgroundImageView];
-		
-		
+        
+        
 		// Create the TiledPDFView based on the size of the PDF page and scale it to fit the view.
 		pdfView = [[TiledPDFView alloc] initWithFrame:pageRect andScale:pdfScale];
 		[pdfView setPage:page];
-		
+        
 		[self addSubview:pdfView];
     }
     return self;
@@ -140,7 +144,7 @@
     [super layoutSubviews];
     
     // center the image as it becomes smaller than the size of the screen
-	
+    
     CGSize boundsSize = self.bounds.size;
     CGRect frameToCenter = pdfView.frame;
     
@@ -181,15 +185,15 @@
 {
 	// set the new scale factor for the TiledPDFView
 	pdfScale *=scale;
-	
+    
 	// Calculate the new frame for the new TiledPDFView
 	CGRect pageRect = CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
 	pageRect.size = CGSizeMake(pageRect.size.width*pdfScale, pageRect.size.height*pdfScale);
-	
+    
 	// Create a new TiledPDFView based on new frame and scaling.
 	pdfView = [[TiledPDFView alloc] initWithFrame:pageRect andScale:pdfScale];
 	[pdfView setPage:page];
-	
+    
 	// Add the new TiledPDFView to the PDFScrollView.
 	[self addSubview:pdfView];
 }
@@ -202,7 +206,7 @@
 	// Remove back tiled view.
 	[oldPDFView removeFromSuperview];
 	[oldPDFView release];
-	
+    
 	// Set the current TiledPDFView to be the old view.
 	oldPDFView = pdfView;
 	[self addSubview:oldPDFView];

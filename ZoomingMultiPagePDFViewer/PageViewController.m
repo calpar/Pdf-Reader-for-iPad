@@ -6,18 +6,16 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ZoomingMultiPagePDFViewerViewController.h"
+#import "PageViewController.h"
 #import "PDFScrollView.h"
 
-@interface ZoomingMultiPagePDFViewerViewController (Private)
+@interface PageViewController (Private)
     - (void)tilePages;
     - (BOOL)isDisplayingPageForIndex:(NSInteger)index;
-    - (void)configurePage:(PDFScrollView *)page forIndex:(int)index;
     - (PDFScrollView *)dequeueRecycledPage;
 @end
 
-
-@implementation ZoomingMultiPagePDFViewerViewController
+@implementation PageViewController
 
 @synthesize recycledPages;
 @synthesize visiblePages;
@@ -36,14 +34,11 @@
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - Scroll View delegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)theScrollView
 {
     [self tilePages];
 }
@@ -52,11 +47,11 @@
 {
     CGRect visibleBounds = [scrollView bounds];
     
-    int firstNeededPageIndex = floorf(CGRectGetMinY(visibleBounds) / CGRectGetHeight(visibleBounds));
-    int lastNeededPageIndex = floorf((CGRectGetMaxY(visibleBounds)-1) / CGRectGetHeight(visibleBounds));
+    int firstNeededPageIndex = (floorf(CGRectGetMinY(visibleBounds) / CGRectGetHeight(visibleBounds))) - 1;
+    int lastNeededPageIndex = firstNeededPageIndex + 2;
     
-    firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
-    lastNeededPageIndex = MIN(lastNeededPageIndex, self.pageCount -1);
+    firstNeededPageIndex = MAX(firstNeededPageIndex, 1);
+    lastNeededPageIndex = MIN(lastNeededPageIndex, self.pageCount);
 
     for (PDFScrollView *pageView in visiblePages) 
     {
@@ -69,17 +64,16 @@
     
     [visiblePages minusSet:recycledPages];
     
+    [recycledPages removeAllObjects];
+    
     // Add missing pages
     for (int index = firstNeededPageIndex; index <= lastNeededPageIndex; index++) 
     {
         if(![self isDisplayingPageForIndex:index])
         {
-            PDFScrollView *page = [self dequeueRecycledPage];
-            if(!page)
-            {
-                page = [[PDFScrollView alloc] initWithFrame:[[self view] bounds] andFileName:@"alice.pdf"];
-            }
-            [self configurePage:page forIndex:index];
+            PDFScrollView *page = [[PDFScrollView alloc] initWithFrame:CGRectMake(0, 748 * (index - 1), 1024, 748) 
+                                                           andFileName:@"alice.pdf" 
+                                                              withPage:index];
             [scrollView addSubview:page];
             [visiblePages addObject:page];
         }
@@ -96,12 +90,6 @@
     }
     
     return page;
-}
-
-- (void)configurePage:(PDFScrollView *)page forIndex:(int)index
-{
-    page.pageIndex = index;
-    page.frame = CGRectMake(0, 768*(index - 1), 1024, 768);
 }
 
 - (BOOL)isDisplayingPageForIndex:(NSInteger)index
@@ -136,11 +124,21 @@
     scrollView.pagingEnabled = YES;
     scrollView.scrollEnabled = YES;
     scrollView.delegate = self;
-    scrollView.contentSize = CGSizeMake(1024, 768*2);
-    
+    scrollView.contentSize = CGSizeMake(1024, 768 * pageCount);
     [self.view addSubview:scrollView];
     
-    [self tilePages];
+    PDFScrollView *pageA = [[PDFScrollView alloc] initWithFrame:CGRectMake(0, 0, 1024, 748) 
+                                                           andFileName:@"alice.pdf" withPage:1];
+    
+    PDFScrollView *pageB = [[PDFScrollView alloc] initWithFrame:CGRectMake(0, 748 * 1, 1024, 748) 
+                                                   andFileName:@"alice.pdf" withPage:2];
+    
+    [scrollView addSubview:pageA];
+    [visiblePages addObject:pageA];
+    [scrollView addSubview:pageB];
+    [visiblePages addObject:pageB];
+    
+    //[self tilePages];
 }
 - (void)viewDidUnload
 {

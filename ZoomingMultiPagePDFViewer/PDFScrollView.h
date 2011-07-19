@@ -65,10 +65,12 @@
 	CGPDFDocumentRef pdf;
     
     int pageIndex;
+    NSString *fileName;
 }
 
+@property (nonatomic, retain) NSString *fileName;
 @property (nonatomic, assign) int pageIndex;
 
-- (id)initWithFrame:(CGRect)frame andFileName:(NSString *)fileName;
+- (id)initWithFrame:(CGRect)frame andFileName:(NSString *)fileName withPage:(NSInteger)pageIndex;
 
 @end

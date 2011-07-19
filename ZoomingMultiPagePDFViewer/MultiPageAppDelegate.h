@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZoomingMultiPagePDFViewerViewController;
+@class PageViewController;
 
-@interface ZoomingMultiPagePDFViewerAppDelegate : NSObject <UIApplicationDelegate> {
+@interface MultiPageAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet ZoomingMultiPagePDFViewerViewController *viewController;
+@property (nonatomic, retain) IBOutlet PageViewController *viewController;
 
 @end

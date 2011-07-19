@@ -12,10 +12,10 @@
 		703269A813D2BB1A0048E55E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703269A713D2BB1A0048E55E /* CoreGraphics.framework */; };
 		703269AE13D2BB1A0048E55E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703269AC13D2BB1A0048E55E /* InfoPlist.strings */; };
 		703269B113D2BB1A0048E55E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B013D2BB1A0048E55E /* main.m */; };
-		703269B413D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */; };
+		703269B413D2BB1A0048E55E /* MultiPageAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B313D2BB1A0048E55E /* MultiPageAppDelegate.m */; };
 		703269B713D2BB1A0048E55E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703269B513D2BB1A0048E55E /* MainWindow.xib */; };
-		703269BA13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */; };
-		703269BD13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */; };
+		703269BA13D2BB1A0048E55E /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269B913D2BB1A0048E55E /* PageViewController.m */; };
+		703269BD13D2BB1A0048E55E /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703269BB13D2BB1A0048E55E /* PageViewController.xib */; };
 		703269CB13D2BF420048E55E /* TiledPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269C713D2BF420048E55E /* TiledPDFView.m */; };
 		703269CC13D2BF420048E55E /* PDFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 703269C913D2BF420048E55E /* PDFScrollView.m */; };
 		703269DD13D2C7C90048E55E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703269DB13D2C7600048E55E /* QuartzCore.framework */; };
@@ -31,12 +31,12 @@
 		703269AD13D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		703269AF13D2BB1A0048E55E /* ZoomingMultiPagePDFViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZoomingMultiPagePDFViewer-Prefix.pch"; sourceTree = "<group>"; };
 		703269B013D2BB1A0048E55E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		703269B213D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoomingMultiPagePDFViewerAppDelegate.h; sourceTree = "<group>"; };
-		703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomingMultiPagePDFViewerAppDelegate.m; sourceTree = "<group>"; };
+		703269B213D2BB1A0048E55E /* MultiPageAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPageAppDelegate.h; sourceTree = "<group>"; };
+		703269B313D2BB1A0048E55E /* MultiPageAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiPageAppDelegate.m; sourceTree = "<group>"; };
 		703269B613D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		703269B813D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoomingMultiPagePDFViewerViewController.h; sourceTree = "<group>"; };
-		703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomingMultiPagePDFViewerViewController.m; sourceTree = "<group>"; };
-		703269BC13D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ZoomingMultiPagePDFViewerViewController.xib; sourceTree = "<group>"; };
+		703269B813D2BB1A0048E55E /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		703269B913D2BB1A0048E55E /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		703269BC13D2BB1A0048E55E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PageViewController.xib; sourceTree = "<group>"; };
 		703269C613D2BF420048E55E /* TiledPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledPDFView.h; sourceTree = "<group>"; };
 		703269C713D2BF420048E55E /* TiledPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledPDFView.m; sourceTree = "<group>"; };
 		703269C813D2BF420048E55E /* PDFScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFScrollView.h; sourceTree = "<group>"; };
@@ -91,13 +91,13 @@
 		703269A913D2BB1A0048E55E /* ZoomingMultiPagePDFViewer */ = {
 			isa = PBXGroup;
 			children = (
-				703269B813D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.h */,
-				703269B913D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m */,
-				703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */,
-				703269C313D2BD7C0048E55E /* base */,
-				703269B213D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.h */,
-				703269B313D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m */,
+				703269B213D2BB1A0048E55E /* MultiPageAppDelegate.h */,
+				703269B313D2BB1A0048E55E /* MultiPageAppDelegate.m */,
 				703269B513D2BB1A0048E55E /* MainWindow.xib */,
+				703269B813D2BB1A0048E55E /* PageViewController.h */,
+				703269B913D2BB1A0048E55E /* PageViewController.m */,
+				703269BB13D2BB1A0048E55E /* PageViewController.xib */,
+				703269C313D2BD7C0048E55E /* base */,
 				703269AA13D2BB1A0048E55E /* Supporting Files */,
 			);
 			path = ZoomingMultiPagePDFViewer;
@@ -175,7 +175,7 @@
 			files = (
 				703269AE13D2BB1A0048E55E /* InfoPlist.strings in Resources */,
 				703269B713D2BB1A0048E55E /* MainWindow.xib in Resources */,
-				703269BD13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib in Resources */,
+				703269BD13D2BB1A0048E55E /* PageViewController.xib in Resources */,
 				703269DF13D2C9CC0048E55E /* alice.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,8 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				703269B113D2BB1A0048E55E /* main.m in Sources */,
-				703269B413D2BB1A0048E55E /* ZoomingMultiPagePDFViewerAppDelegate.m in Sources */,
-				703269BA13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.m in Sources */,
+				703269B413D2BB1A0048E55E /* MultiPageAppDelegate.m in Sources */,
+				703269BA13D2BB1A0048E55E /* PageViewController.m in Sources */,
 				703269CB13D2BF420048E55E /* TiledPDFView.m in Sources */,
 				703269CC13D2BF420048E55E /* PDFScrollView.m in Sources */,
 			);
@@ -214,12 +214,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		703269BB13D2BB1A0048E55E /* ZoomingMultiPagePDFViewerViewController.xib */ = {
+		703269BB13D2BB1A0048E55E /* PageViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				703269BC13D2BB1A0048E55E /* en */,
 			);
-			name = ZoomingMultiPagePDFViewerViewController.xib;
+			name = PageViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
